@@ -1,5 +1,8 @@
 # Task: Create a VPC with IPv6 support using Terraform
 
+For this task, create a VPC named xfusion-vpc in the us-east-1 region,
+with the Amazon-provided IPv6 CIDR block using terraform.
+
 This folder contains Terraform code to **Create a VPC with IPv6 support using Terraform**.
 
 ## Files
