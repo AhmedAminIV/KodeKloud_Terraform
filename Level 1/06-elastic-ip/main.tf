@@ -1,1 +1,5 @@
-# TODO: Add Terraform resources for elastic-ip
+resource "aws_eip" "devops_eip" {
+  tags = {
+    Name = var.eip_name
+  }
+}
