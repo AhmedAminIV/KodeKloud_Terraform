@@ -1,5 +1,7 @@
 # Task: Create an Elastic IP using Terraform
 
+For this task, allocate an Elastic IP address named devops-eip using Terraform.
+
 This folder contains Terraform code to **Create an Elastic IP using Terraform**.
 
 ## Files
