@@ -1,5 +1,8 @@
 # Task: Create a Public S3 Bucket using Terraform
 
+Create a public S3 bucket named nautilus-s3-14145 using Terraform.
+Ensure the bucket is accessible publicly once created by setting the proper ACL.
+
 This folder contains Terraform code to **Create a Public S3 Bucket using Terraform**.
 
 ## Files
