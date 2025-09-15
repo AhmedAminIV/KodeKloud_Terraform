@@ -1,5 +1,10 @@
 # Task: Create a Private S3 Bucket using Terraform
 
+Create an S3 bucket using Terraform with the following details:
+
+1) The name of the S3 bucket must be datacenter-s3-29687.
+2) The S3 bucket must block all public access, making it a private bucket.
+
 This folder contains Terraform code to **Create a Private S3 Bucket using Terraform**.
 
 ## Files

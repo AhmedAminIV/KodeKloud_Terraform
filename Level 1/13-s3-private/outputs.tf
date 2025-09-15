@@ -1,1 +1,9 @@
-# TODO: Add outputs for s3-private
+output "bucket_name" {
+  description = "S3 bucket name"
+  value       = aws_s3_bucket.datacenter_s3.bucket
+}
+
+output "bucket_arn" {
+  description = "S3 bucket ARN"
+  value       = aws_s3_bucket.datacenter_s3.arn
+}
