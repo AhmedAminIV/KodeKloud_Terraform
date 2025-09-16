@@ -3,3 +3,9 @@ variable "aws_region" {
   type        = string
   default     = "us-east-1"
 }
+
+variable "user_name" {
+  description = "IAM user name"
+  type        = string
+  default     = "iamuser_rose"
+}

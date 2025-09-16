@@ -1,5 +1,7 @@
 # Task: Create an IAM User using Terraform
 
+For this task, create an IAM user named iamuser_rose using terraform.
+
 This folder contains Terraform code to **Create an IAM User using Terraform**.
 
 ## Files
