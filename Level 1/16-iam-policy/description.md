@@ -1,5 +1,9 @@
 # Task: Create an IAM Policy using Terraform
 
+Create an IAM policy named iampolicy_rose in us-east-1 region using Terraform.
+It must allow read-only access to the EC2 console, i.e.,
+this policy must allow users to view all instances, AMIs, and snapshots in the Amazon EC2 console.
+
 This folder contains Terraform code to **Create an IAM Policy using Terraform**.
 
 ## Files
