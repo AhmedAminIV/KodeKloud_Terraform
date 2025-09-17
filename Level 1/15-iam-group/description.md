@@ -1,5 +1,7 @@
 # Task: Create an IAM Group using Terraform
 
+Create an IAM group named iamgroup_siva using terraform.
+
 This folder contains Terraform code to **Create an IAM Group using Terraform**.
 
 ## Files
