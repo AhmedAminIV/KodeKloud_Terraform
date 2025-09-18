@@ -1,1 +1,16 @@
-# TODO: Add Terraform resources for dynamodb
+# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dynamodb_table
+
+resource "aws_dynamodb_table" "xfusion" {
+  name             = var.db_name
+  billing_mode     = var.billing_mode
+  hash_key = var.hash_key
+
+  attribute {
+    name = var.hash_key
+    type = var.hash_key_type
+  }
+
+  tags = {
+    Name = var.db_name
+  }
+}
