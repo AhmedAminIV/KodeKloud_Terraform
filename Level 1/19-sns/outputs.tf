@@ -1,1 +1,9 @@
-# TODO: Add outputs for sns
+output "sns_topic_arn" {
+  description = "The ARN of the SNS topic"
+  value       = aws_sns_topic.devops_notification.arn
+}
+
+output "sns_topic_name" {
+  description = "The name of the SNS topic"
+  value       = aws_sns_topic.devops_notification.name
+}
