@@ -1,5 +1,10 @@
 # Task: Setup OpenSearch using Terraform
 
+The Nautilus DevOps team needs to set up an Amazon OpenSearch Service domain to store and search their application logs.
+The domain should have the following specification:
+
+1) The domain name should be devops-es.
+
 This folder contains Terraform code to **Setup OpenSearch using Terraform**.
 
 ## Files
