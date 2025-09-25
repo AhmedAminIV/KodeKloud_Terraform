@@ -1,1 +1,4 @@
-# TODO: Add outputs for secrets-manager
+output "secret_arn" {
+  description = "ARN of the created secret"
+  value       = aws_secretsmanager_secret.datacenter_secret.arn
+}
