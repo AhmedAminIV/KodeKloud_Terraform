@@ -1,5 +1,8 @@
 # Task: Attach an Elastic IP to an EC2 Instance using Terraform
 
+There is an instance named datacenter-ec2 and an elastic-ip named datacenter-ec2-eip in us-east-1 region.
+Attach the datacenter-ec2-eip elastic-ip to the datacenter-ec2 instance using Terraform only.
+
 This folder contains Terraform code to **Attach an Elastic IP to an EC2 Instance using Terraform**.
 
 ## Files
