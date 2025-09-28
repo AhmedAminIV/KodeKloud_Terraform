@@ -1,5 +1,8 @@
 # Task: Attach an IAM Policy using Terraform
 
+An IAM user named iamuser_jim and a policy named iampolicy_jim already exists.
+Use Terraform to attach the IAM policy iampolicy_jim to the IAM user iamuser_jim.
+
 This folder contains Terraform code to **Attach an IAM Policy using Terraform**.
 
 ## Files
