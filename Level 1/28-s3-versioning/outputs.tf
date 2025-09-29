@@ -1,1 +1,3 @@
-# TODO: Add outputs for s3-versioning
+output "ran_bucket_versioning" {
+  value = aws_s3_bucket.s3_ran_bucket.versioning
+}
