@@ -1,5 +1,8 @@
 # Task: Delete an IAM Role using Terraform
 
+Delete the IAM role named iamrole_yousuf using Terraform. Make sure to keep the provisioning code,
+as we might need to provision this instance again later.
+
 This folder contains Terraform code to **Delete an IAM Role using Terraform**.
 
 ## Files
