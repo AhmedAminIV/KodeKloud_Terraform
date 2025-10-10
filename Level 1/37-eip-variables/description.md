@@ -1,5 +1,8 @@
 # Task: Setup Elastic IP variables in Terraform
 
+For this task, create an AWS Elastic IP using Terraform with the following requirement:
+The Elastic IP name devops-eip should be stored in a variable named KKE_eip.
+
 This folder contains Terraform code to **Setup Elastic IP variables in Terraform**.
 
 ## Files
