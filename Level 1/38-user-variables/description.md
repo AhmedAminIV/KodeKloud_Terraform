@@ -1,5 +1,10 @@
 # Task: Setup IAM User variables in Terraform
 
+The Nautilus DevOps team is automating IAM user creation using Terraform for better identity management.
+
+For this task, create an AWS IAM User using Terraform with the following requirements:
+The IAM User name iamuser_jim should be stored in a variable named KKE_user.
+
 This folder contains Terraform code to **Setup IAM User variables in Terraform**.
 
 ## Files
