@@ -1,16 +1,6 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
-}
-
-provider "aws" {
-  region = var.aws_region
-}
-
-module "launch-ec2-in-private-subnet" {
-  source = "./modules"
+module "private_vpc_ec2" {
+  source         = "./modules"
+  KKE_VPC_CIDR   = var.KKE_VPC_CIDR
+  KKE_SUBNET_CIDR = var.KKE_SUBNET_CIDR
+  aws_region     = var.aws_region
 }
