@@ -1,1 +1,3 @@
-# Add relevant outputs for replace-ec2-instance here
+output "instance_id" {
+  value = module.ec2_instance.instance_id
+}
