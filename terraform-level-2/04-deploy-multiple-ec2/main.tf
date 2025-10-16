@@ -1,16 +1,8 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
-}
-
-provider "aws" {
-  region = var.aws_region
-}
-
-module "deploy-multiple-ec2" {
-  source = "./modules"
+module "ec2_instances" {
+  source          = "./modules"
+  instance_count  = var.KKE_INSTANCE_COUNT
+  instance_type   = var.KKE_INSTANCE_TYPE
+  key_name        = var.KKE_KEY_NAME
+  instance_prefix = var.KKE_INSTANCE_PREFIX
+  ami_id          = local.AMI_ID
 }
