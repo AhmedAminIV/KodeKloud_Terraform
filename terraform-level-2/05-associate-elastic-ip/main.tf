@@ -1,16 +1,12 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
+module "ec2_instance" {
+  source        = "./modules/ec2"
+  instance_name = var.instance_name
+  instance_type = var.instance_type
+  ami_id        = local.AMI_ID
 }
 
-provider "aws" {
-  region = var.aws_region
-}
-
-module "associate-elastic-ip" {
-  source = "./modules"
+module "elastic_ip" {
+  source      = "./modules/eip"
+  instance_id = module.ec2_instance.instance_id
+  eip_name    = var.eip_name
 }
