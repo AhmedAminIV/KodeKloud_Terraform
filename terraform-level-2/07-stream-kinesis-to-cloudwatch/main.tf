@@ -1,16 +1,10 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
-}
-
-provider "aws" {
-  region = var.aws_region
-}
-
-module "stream-kinesis-to-cloudwatch" {
-  source = "./modules"
+# ---------------------------------
+# Module: Kinesis + CloudWatch Alarm
+# ---------------------------------
+module "kinesis_monitoring" {
+  source              = "./modules/kinesis_monitoring"
+  kinesis_stream_name = var.kinesis_stream_name
+  shard_count         = var.shard_count
+  alarm_name          = var.alarm_name
+  threshold           = var.threshold
 }

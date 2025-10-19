@@ -1,9 +1,3 @@
-variable "aws_region" {
-  description = "AWS region for deployment"
-  type        = string
-  default     = "us-east-1"
-}
-
 variable "kinesis_stream_name" {
   type        = string
   description = "Name of the Kinesis Data Stream"
