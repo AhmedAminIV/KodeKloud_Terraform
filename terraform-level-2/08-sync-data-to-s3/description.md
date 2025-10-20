@@ -1,7 +1,8 @@
 # Task 08: sync data to s3
 
 ## Objective
-Write Terraform code to accomplish this task as per the lab requirements.
+
+
 
 ### Directory Structure
 ```

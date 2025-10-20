@@ -1,16 +1,24 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
+# terraform state mv aws_s3_bucket.wordpress_bucket module.wordpress_bucket.aws_s3_bucket.new_bucket
+# terraform state mv aws_s3_bucket_acl.wordpress_bucket_acl module.wordpress_bucket.aws_s3_bucket_acl.new_bucket_acl
+# terraform state list
+module "wordpress_bucket" {
+  source      = "./modules/s3_create"
+  bucket_name = var.source_bucket
 }
 
-provider "aws" {
-  region = var.aws_region
+module "s3_new_bucket" {
+  source      = "./modules/s3_create"
+  bucket_name = var.KKE_BUCKET
 }
 
-module "sync-data-to-s3" {
-  source = "./modules"
+module "s3_migration" {
+  source        = "./modules/s3_migration"
+  new_bucket    = var.KKE_BUCKET
+  source_bucket = var.source_bucket
+
+  depends_on = [
+    module.s3_new_bucket,
+    module.wordpress_bucket
+  ]
+
 }
