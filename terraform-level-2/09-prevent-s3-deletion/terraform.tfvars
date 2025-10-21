@@ -1,1 +1,1 @@
-bucket_name = "nautilus-s3-4681"
+KKE_BUCKET_NAME = "nautilus-s3-4681"
