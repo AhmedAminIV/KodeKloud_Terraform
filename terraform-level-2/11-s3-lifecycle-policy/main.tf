@@ -1,16 +1,8 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
-}
+module "s3_bucket" {
+  source = "./modules/s3"
 
-provider "aws" {
-  region = var.aws_region
-}
-
-module "s3-lifecycle-policy" {
-  source = "./modules"
+  bucket_name       = var.bucket_name
+  enable_versioning = var.enable_versioning
+  create_lifecycle  = var.create_lifecycle
+  lifecycle_rule_id = var.lifecycle_rule_id
 }

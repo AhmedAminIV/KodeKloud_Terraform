@@ -1,1 +1,3 @@
-# Add relevant outputs for s3-lifecycle-policy here
+output "KKE_bucket_name" {
+  value = module.s3_bucket.bucket_name
+}

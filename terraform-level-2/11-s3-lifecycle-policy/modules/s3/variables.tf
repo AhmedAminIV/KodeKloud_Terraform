@@ -1,9 +1,3 @@
-variable "aws_region" {
-  description = "AWS region for deployment"
-  type        = string
-  default     = "us-east-1"
-}
-
 variable "enable_versioning" {
   description = "Enable versioning for objects or not"
   type        = bool
@@ -24,7 +18,6 @@ variable "create_lifecycle" {
 variable "lifecycle_rule_id" {
   description = "S3 lifecycle policy rule name (id)"
   type        = string
-  default = "my_rule"
 }
 
 variable "s3_IA_transition_after" {
