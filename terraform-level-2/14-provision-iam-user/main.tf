@@ -1,16 +1,5 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
+module "iam_user" {
+  source        = "./modules/iam_user"
+  user_name = var.KKE_USER_NAME
 }
 
-provider "aws" {
-  region = var.aws_region
-}
-
-module "provision-iam-user" {
-  source = "./modules"
-}
