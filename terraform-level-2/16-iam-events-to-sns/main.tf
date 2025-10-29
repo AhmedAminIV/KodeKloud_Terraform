@@ -1,16 +1,26 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
+# SNS Module
+module "sns" {
+  source = "./modules/sns_topic"
+
+  topic_name = local.KKE_SNS_TOPIC_NAME
 }
 
-provider "aws" {
-  region = var.aws_region
+# IAM Role Module
+module "iam_role" {
+  source    = "./modules/iam_role"
+  role_name = local.KKE_ROLE_NAME
 }
 
-module "iam-events-to-sns" {
-  source = "./modules"
+# IAM Policy Module
+module "iam_policy" {
+  source = "./modules/iam_policy"
+
+  policy_name    = local.KKE_POLICY_NAME
+  topic_arn      = module.sns.topic_arn
+  policy_actions = var.policy_actions
+}
+
+resource "aws_iam_role_policy_attachment" "attach" {
+  role       = module.iam_role.role_name
+  policy_arn = module.iam_policy.policy_arn
 }
