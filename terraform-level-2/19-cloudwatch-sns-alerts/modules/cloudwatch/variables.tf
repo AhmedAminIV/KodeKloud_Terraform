@@ -1,10 +1,3 @@
-variable "aws_region" {
-  description = "AWS region for deployment"
-  type        = string
-  default     = "us-east-1"
-}
-
-
 variable "alarm_name" {
   description = "Name for the cloud watch alarm"
   type        = string
@@ -15,7 +8,7 @@ variable "threshold" {
   type        = number
 }
 
-variable "topic_name" {
-  description = "Name of the SNS topic"
+variable "sns_arn" {
+  description = "arn of the sns topic"
   type        = string
 }

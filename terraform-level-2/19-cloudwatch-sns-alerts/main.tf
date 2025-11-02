@@ -1,16 +1,11 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
+module "sns" {
+  source     = "./modules/sns"
+  topic_name = var.topic_name
 }
 
-provider "aws" {
-  region = var.aws_region
-}
-
-module "cloudwatch-sns-alerts" {
-  source = "./modules"
+module "cw" {
+  source     = "./modules/cloudwatch"
+  alarm_name = var.alarm_name
+  threshold  = var.threshold
+  sns_arn    = module.sns.topic_arn
 }
